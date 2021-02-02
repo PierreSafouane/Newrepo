@@ -1,0 +1,36 @@
+package fr.formation.afpa.io.stream;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Date;
+
+public class ObjectIntputStreamExample {
+
+	public static void main(String[] args) {
+		
+		InputStream is;
+		
+		try {
+			is = new FileInputStream("toto/obj.txt");
+			ObjectInputStream dis = new ObjectInputStream(is);
+			
+			String cat = dis.readUTF();
+			Date date = dis.read
+
+			System.out.println("marque : "+marque);
+			System.out.println("model : "+model);
+			System.out.println("date : "+date);
+			
+			dis.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

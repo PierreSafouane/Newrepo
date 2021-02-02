@@ -1,0 +1,16 @@
+package fr.formation.afpa.test;
+
+public class Voiture {
+
+	String marque;
+	String model;
+	int date;
+
+	public Voiture(String marque, String model, int date) {
+		this.marque = marque;
+		this.model = model;
+		this.date = date;
+
+	}
+
+}

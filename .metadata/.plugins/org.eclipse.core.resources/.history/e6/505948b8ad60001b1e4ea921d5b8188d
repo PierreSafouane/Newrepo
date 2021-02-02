@@ -1,0 +1,35 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		
+		InputStream is;
+		
+		try {
+			is = new FileInputStream("tp/ex1.txt");
+			DataInputStream dis = new DataInputStream(is);
+			char[] tmp = new char[20];
+			int i = -1;
+			
+			while((i= dis.readChar())!=-1) {
+				String s = new String (tmp,0,i);
+				System.out.println(s);
+			}
+
+			is.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

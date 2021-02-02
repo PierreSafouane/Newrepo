@@ -1,0 +1,32 @@
+package fr.formation.afpa.io.stream;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Date;
+import java.io.*;
+
+public class ObjectOutputStreamExample {
+
+	public static void main(String[] args) {
+
+		try {
+			OutputStream os = new FileOutputStream("toto/obj.txt");
+
+			ObjectOutputStream oos = new ObjectOutputStream(os);
+			
+			oos.writeUTF("voiture de luxe");
+			oos.writeObject(new Date());
+			
+			
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

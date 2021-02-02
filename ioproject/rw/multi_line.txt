@@ -1,0 +1,4 @@
+bonjour java!
+ligne deux
+le fichier spécifié est introuvable
+fin

@@ -1,0 +1,19 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class DataInputStreamExample {
+
+	public static void main(String[] args) {
+		
+		try {
+			InputStream is = new FileInputStream("toto/data.txt");
+			DataInputStream dis = new DataInputStream(is);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

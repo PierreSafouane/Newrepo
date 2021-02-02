@@ -1,0 +1,41 @@
+package fr.formation.afpa.exo.fluxfichier;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		
+		 Scanner scanner = new Scanner(System.in);
+	        System.out.print("nom du repertoire : ");
+	        String nomRepString = scanner.next();
+	        String path = ("C:\\Users\\afpa\\" + nomRepString);
+	        
+	        
+
+	}
+	
+	public void testFile (String path) {
+		
+		File file = new File(path);
+		
+		if(file.exists()) {
+			if(file.isDirectory()) {
+				if(file.listFiles().length>0) {
+					System.out.println(file.listFiles());
+				}
+				else {
+					
+				}
+			}
+			else {
+				
+			}
+		}
+		else {
+			
+		}
+	}
+
+}

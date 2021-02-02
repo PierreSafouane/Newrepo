@@ -1,0 +1,20 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class Ex1Input {
+
+	public static void main(String[] args) {
+		
+		InputStream is = new FileInputStream("tp/ex1.txt");
+		DataInputStream d = new DataInputStream(is);
+		
+		String nom = d.readUTF();
+		String prenom = d.readUTF();
+		int annee = d.readInt();
+
+	}
+
+}

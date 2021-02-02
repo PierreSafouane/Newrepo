@@ -1,0 +1,65 @@
+@charset "ISO-8859-1";
+
+body{
+	
+	height:100vh;
+	background:linear-gardient(to bottom right,#d66627,#65477d);
+}	 
+img
+{
+	position:relative;
+	left:0%;
+	height:5em;
+	width:5em;
+	
+}
+
+fieldset {
+	color:#400080;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-family:'Segoe UI';
+    background:#ff8080;
+    border-radius:5em 5em;
+    font-size :15px;
+    }
+
+h2 {
+   position:absolute;
+   top:5%;left:50%;
+   transform:translate(-50%,-50%);
+   font-size:32px;
+   font-family:'Segoe UI';
+   color:#65477d;
+   text-decoration: underline;
+  padding:0 8px;
+    
+    
+    
+}
+
+	
+#log{
+	
+background-color : #d66627;
+border-style:none;
+ width:350px;
+ height:35px;
+ border-radius:5em 5em;
+ font-size :25px;
+  font-family:'Segoe UI';
+  color:#400080;
+  
+ }
+ 
+ 
+ #log:hover 
+ {
+
+	background-color:#65477d;
+
+ }
+
+
+ 

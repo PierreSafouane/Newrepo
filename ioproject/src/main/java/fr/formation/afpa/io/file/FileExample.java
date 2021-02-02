@@ -1,0 +1,78 @@
+package fr.formation.afpa.io.file;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Scanner;
+
+public class FileExample {
+	
+	public void suivant (String pathname) {
+//		String pref = pathname.
+		String pName = pathname.replace("*", "");
+		System.out.println(pName);
+		File child = new File (pName);
+		if (child.isDirectory()) {
+			File[] children = child.listFiles();
+			for(File f: children) {
+			String next = "***"+f.getName();
+			System.out.println(next);
+			suivant(next);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez entrez le pathName du repertoire:");
+		String pathName = sc.nextLine();
+		//créer un fichier représente un chemin
+		File file = new File(pathName);
+		
+		//verifiez s'il existe
+		System.out.println("Path exist ? " +file.exists());
+		
+		if(file.exists()) {
+			getInfosFile(file);
+			File[] children = file.listFiles();
+			for(File f: children)
+				System.out.println("***"+f.getName());
+		}else {
+			//Creer le repertoire donné par le chemin
+			file.mkdirs();
+			File[] roots = File.listRoots();
+			for(File root : roots)
+				System.out.println(root.getAbsolutePath());
+			
+			
+			
+			getInfosFile(file);
+		}
+		
+		String nameFile = sc.nextLine();
+		File fichier = new File(pathName+"/"+nameFile);
+		if(!fichier.exists()) {
+			try {
+				fichier.createNewFile();
+				getInfosFile(fichier);
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+		
+	}
+
+	private static void getInfosFile(File file) {
+		System.out.println("=================================");
+		System.out.println("Directory ? "+ file.isDirectory());		
+		System.out.println("Simple Name :"+file.getName());		
+		System.out.println("Absolute Path :"+file.getAbsolutePath());		
+		System.out.println("Legth(bytes):"+ file.length());		
+		long lastModifyMillis = file.lastModified();		
+		Date lastModifyDate = new Date(lastModifyMillis);		
+		System.out.println("Last modify date :" + lastModifyDate);
+	}
+
+}

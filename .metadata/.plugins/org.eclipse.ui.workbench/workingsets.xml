@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1608285915673_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=ioproject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1608285915704_1" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=ExoJavaTest/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ioproject/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=exo/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1610630192419_3" label="CDA" name="CDA">
+<item elementID="=ClassesObjet/src&lt;pack{Test.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ioproject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tp_App1" type="4"/>
+<item elementID="=exo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/collection" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ClassesObjet" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/project_java0" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/heritage" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1608285948624_2" label="Window Working Set" name="Aggregate for window 1608285948623"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1610630310658_4" label="Multiple Working Sets" name="Aggregate:CDA:Java Main Sources:Java Test Sources:">
+<workingSet IMemento.internal.id="CDA"/>
+<workingSet IMemento.internal.id="Java Main Sources"/>
+<workingSet IMemento.internal.id="Java Test Sources"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1611045473835_6" label="Multiple Working Sets" name="Aggregate:CDA:Java Main Sources:">
+<workingSet IMemento.internal.id="CDA"/>
+<workingSet IMemento.internal.id="Java Main Sources"/>
+</workingSet>
+<mruList name="Java Test Sources"/>
+<mruList name="Java Main Sources"/>
+<mruList name="CDA"/>
+</workingSetManager>

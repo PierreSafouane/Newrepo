@@ -1,0 +1,37 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class Ex1output {
+
+	public static void main(String[] args) {
+
+		String nom ;
+		String prenom;
+		int annee;
+		
+		try {
+			OutputStream w = new FileOutputStream("tp/ex1.txt");
+			DataOutputStream d = new DataOutputStream(w);
+			
+			d.writeUTF(nom);
+			d.writeUTF(prenom);
+			d.writeInt(annee);
+			
+			d.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

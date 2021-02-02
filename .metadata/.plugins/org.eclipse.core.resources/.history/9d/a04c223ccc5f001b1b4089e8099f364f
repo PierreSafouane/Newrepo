@@ -1,0 +1,25 @@
+package fr.formation.afpa.io.steam;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class DateOutputStreamExample {
+
+	public static void main(String[] args) {
+
+		int zip = 59000;
+		String nom = "Lille";
+		long nbrHabitants = 280000;
+		float temperature = 2.5f;
+		
+		try {
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			
+		}
+		
+	}
+
+}

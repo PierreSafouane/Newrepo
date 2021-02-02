@@ -1,0 +1,32 @@
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class DataInputStreamExample {
+
+	public static void main(String[] args) {
+		
+		InputStream is;
+		
+		try {
+			is = new FileInputStream("toto/data.txt");
+			DataInputStream dis = new DataInputStream(is);
+			
+			int zip = dis.readInt();
+			String nom = dis.readUTF();
+			long nbr = dis.readLong();
+			float tmp = dis.readFloat();
+			
+			System.out.println("cp : "zip);
+			System.out.println(nom);
+			System.out.println(nbr);
+			System.out.println(tmp);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

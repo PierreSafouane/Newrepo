@@ -1,0 +1,15 @@
+package fr.formation.afpa.io.file;
+
+import java.util.Scanner;
+
+public class Supr {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez entrez le pathName du repertoire:");
+		String pathName = sc.nextLine();
+		String pName = pathName.replaceAll("*", "");
+		System.out.println(pName);
+	}
+
+}

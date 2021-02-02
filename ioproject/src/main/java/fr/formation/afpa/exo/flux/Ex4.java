@@ -1,0 +1,54 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Ex4 {
+
+	 
+
+    public static void main(String[] args) {
+
+ 
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("nom du repertoire : ");
+        String nomRepString = scanner.next();
+        File file = new File("C:\\Users\\afpa\\Documents\\" + nomRepString);
+
+ 
+
+        while (!file.exists() && file.isDirectory()) {
+
+ 
+
+            System.out.println("Nom incorrect, inextistant ou non repertoire");
+            System.out.print("nom du repertoire : ");
+            nomRepString = scanner.next();
+            file = new File("C:\\Users\\afpa\\Documents\\" + nomRepString);
+        }
+
+ 
+
+        File[] files = file.listFiles();
+
+ 
+
+        for (int i = 0; i < files.length; i++) {
+
+ 
+
+            if (files[i].isDirectory()) {
+                System.out.println(files[i].getName() + " " + "REPERTOIRE");
+            } else {
+                System.out.println(files[i].getName() + " " + "FICHER" + " " + files[i].getTotalSpace());
+            }
+
+ 
+
+        }
+    }
+
+ 
+
+}

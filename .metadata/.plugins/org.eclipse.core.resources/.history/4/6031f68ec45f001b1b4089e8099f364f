@@ -1,0 +1,10 @@
+package fr.formation.afpa.io.steam;
+
+public class InputStreamExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

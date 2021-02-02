@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+
+
+h2 {
+    color : black;
+    margin-left: 95;
+    text-align: center;
+    font-family:'Segoe UI';
+    text-decoration: underline;
+}
+
+img{
+	
+	display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    background-repeat:space;
+}
+
+fieldset {
+	color : black;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-family:'Segoe UI';
+    background:#ff8080;
+    border-radius:5em 5em;
+    font-size :15px;
+    
+}
+
+	#log{
+	
+background-color : #d66627;
+border-style:none;
+ width:350px;
+ height:35px;
+ border-radius:5em 5em;
+ font-size :25px;
+  font-family:'Segoe UI';
+ }
+ 
+ 
+ #log:hover 
+ {
+
+	background-color:#65477d;
+
+ }
+
+
+ .envoyer{
+	background-color : #004080;
+	font-family :'Segoe UI';
+	font-weight: bold;
+	
+ 
+ }
+	

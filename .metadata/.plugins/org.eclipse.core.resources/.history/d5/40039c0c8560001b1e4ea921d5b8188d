@@ -1,0 +1,48 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Scanner;
+
+public class Ex1output {
+
+	public static void main(String[] args) {
+
+		String nom = "";
+		String prenom;
+		int annee;
+		char [] tabn = new char [20];
+		char [] tabp = new char [20];
+		int i;
+		int nnom = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		try {
+			OutputStream w = new FileOutputStream("tp/ex1.txt");
+			DataOutputStream d = new DataOutputStream(w);
+			
+			while(nom != "0") {
+				nnom++;
+				System.out.println("donnez le nom n° "+nnom+" ou ecrire 0 pour fin");
+				
+			}
+			
+			d.writeUTF(nom);
+			d.writeUTF(prenom);
+			d.writeInt(annee);
+			
+			d.close();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

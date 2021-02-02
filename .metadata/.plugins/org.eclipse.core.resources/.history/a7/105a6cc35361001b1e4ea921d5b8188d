@@ -1,0 +1,53 @@
+package fr.formation.afpa.exo.flux;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+public class Ex3 {
+
+    public static void main(String[] args) {
+
+    	 
+
+        InputStream inputStream = new FileInputStream("repert/exo3.txt");
+        Reader reader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(reader);
+        String str = null;
+        int incr = 0;
+        int compt;
+        int i = 1;
+        int reste;
+        try {
+			while ((str = bufferedReader.readLine()) != null) {
+			    incr++;
+			    if (str.length() <= 60) {
+			        System.out.println(incr + " : " + str);
+			    }
+			    if (str.length() > 60) {
+			        System.out.println(incr + " : " + str.subSequence(0, 60));
+			        compt = str.length() / 60;
+			        reste = str.length() % 60;
+			        while (i < compt) {
+			            System.out.println(str.substring(i * 60, (i + 1) * 60));
+			            i++;
+
+ 
+
+			        }
+			        System.out.println(str.substring(str.length() - reste, str.length()));
+			    }
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        System.out.println("fin liste fichier");
+    }
+
+ 
+
+}

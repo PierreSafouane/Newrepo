@@ -1,0 +1,17 @@
+package fr.formation.afpa.io.steam;
+
+import java.io.FileInputStream;
+
+import org.omg.CORBA.portable.InputStream;
+
+public class InputStreamExample {
+
+	public static void main(String[] args) {
+		
+		InputStream is = new FileInputStream("toto/toto.txt");
+		
+		is.close();
+
+	}
+
+}

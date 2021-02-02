@@ -1,0 +1,51 @@
+package fr.formation.afpa.io.stream;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.util.Date;
+
+import fr.formation.afpa.test.Voiture;
+
+public class ObjectIntputStreamExample {
+
+	public static void main(String[] args) {
+		
+		InputStream is;
+		
+		try {
+			is = new FileInputStream("toto/obj.txt");
+			ObjectInputStream dis = new ObjectInputStream(is);
+			
+			String cat = dis.readUTF();
+			try {
+			Date date = (Date) dis.readObject();
+			
+			Voiture v1 = (Voiture) dis.readObject();
+			Voiture v2 = (Voiture) dis.readObject();
+			Voiture v3;
+			
+				v3 = (Voiture) dis.readObject();
+			
+
+			System.out.println("categorie : "+cat);
+			System.out.println("date : "+date);
+			System.out.println("v1 marque : "+v1.getMarque()+" - model :  "+v1.getModel()+" - date : "+v1.getDate());
+			System.out.println("v2 marque : "+v2.getMarque()+" - model :  "+v2.getModel()+" - date : "+v2.getDate());
+			System.out.println("v3 marque : "+v3.getMarque()+" - model :  "+v3.getModel()+" - date : "+v3.getDate());
+
+			dis.close();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

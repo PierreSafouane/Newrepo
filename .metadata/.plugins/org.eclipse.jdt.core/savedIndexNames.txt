@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\afpa\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+3563645434.index
+910411821.index
+3630271973.index
+3758919205.index
+192316616.index
+1505240819.index

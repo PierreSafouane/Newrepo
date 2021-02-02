@@ -1,0 +1,29 @@
+package fr.formation.afpa.io.steam;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+
+public class InputStreamExample {
+
+	public static void main(String[] args) {
+		
+		InputStream is;
+		try {
+			is = new FileInputStream("toto/toto.txt");
+			byte[] tmp = new byte[10];
+			int i = -1;
+			while((i= is.read())!=-1) {
+				String s = new String (tmp,0,i);
+				System.out.print(s);
+			}
+			
+			is.close();
+		} catch (Exception e) {
+			
+		}
+
+
+	}
+
+}

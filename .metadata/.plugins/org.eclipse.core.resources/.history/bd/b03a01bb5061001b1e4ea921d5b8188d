@@ -1,0 +1,27 @@
+package fr.formation.afpa.exo.flux;
+
+public class ufoiejg {
+
+	public static void main(String[] args) {
+		
+		String str = "";
+		int compt;
+		int i = 0;
+
+		if(str.length()<=60) {
+			System.out.println(str);
+		}
+		
+		if(str.length()>60) {
+			System.out.println(str.subSequence(0, 60));
+			compt = str.length()/60;
+			i++;
+			for (int j = i; j <compt; j++) {
+				str.substring(i*60,(i+1)*60);
+			}
+		
+		}
+		
+	}
+
+}

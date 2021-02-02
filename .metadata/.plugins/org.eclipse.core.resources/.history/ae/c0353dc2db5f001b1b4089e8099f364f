@@ -1,0 +1,11 @@
+package fr.formation.afpa.io.stream;
+
+public class ObjectIntputStreamExample {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

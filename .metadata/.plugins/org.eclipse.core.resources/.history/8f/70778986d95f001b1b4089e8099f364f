@@ -1,0 +1,23 @@
+package fr.formation.afpa.io.stream;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+public class ObjectOutputStream {
+
+	public static void main(String[] args) {
+		
+		try {
+			OutputStream os = new FileOutputStream("toto/obj.txt");
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

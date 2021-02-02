@@ -1,0 +1,9 @@
+package fr.formation.afpa.io.steam;
+
+public class OutputStreamExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

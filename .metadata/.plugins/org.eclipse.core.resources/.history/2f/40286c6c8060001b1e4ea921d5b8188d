@@ -1,0 +1,15 @@
+package fr.formation.afpa.exo.flux;
+
+public class Ex1output {
+
+	public static void main(String[] args) {
+
+		String nom = "";
+		String prenom;
+		int annee;
+		
+		Output
+
+	}
+
+}

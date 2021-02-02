@@ -1,0 +1,24 @@
+package fr.formation.afpa.exo.fluxfichier;
+
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.ArrayList;
+
+public class Filter implements FilenameFilter {
+	
+	private String extention;
+	private String[]list;
+	
+	public Filter(String extention, String tab[]) {
+		this.extention = extention;
+		list = tab;
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		return name.toLowerCase().endsWith(extention);
+	}
+	
+	
+
+}
